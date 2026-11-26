@@ -5,7 +5,7 @@ public class Answer {
     private String text;
     private boolean correct;
 
-    public Answer(char letter, String text, Boolean correct) {
+    public Answer(char letter, String text, boolean correct) {
         this.letter = letter;
         this.text = text;
         this.correct = correct;
@@ -19,7 +19,11 @@ public class Answer {
         return text;
     }
 
-    public Boolean isCorrect() {
+    public boolean isCorrect() {
         return correct;
+    }
+
+    public String getFormattedAnswer() {
+        return (Character.toUpperCase(letter) + ") " + text);
     }
 }

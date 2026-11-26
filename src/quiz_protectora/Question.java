@@ -32,4 +32,14 @@ public class Question {
 
         return false;
     }
+
+    public String getFormattedQuestion() {
+        String question = text;
+
+        for(int i = 0; i < answers.length; i++) {
+            question += "\n" + answers[i].getFormattedAnswer();
+        }
+
+        return question;
+    }
 }
