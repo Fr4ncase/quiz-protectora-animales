@@ -1,5 +1,7 @@
 package quiz_protectora;
 
+import java.time.LocalDateTime;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -15,5 +17,10 @@ public class Main {
 //        System.out.println(question.isCorrectAnswer('c'));
 
         System.out.println(question.getFormattedQuestion());
+
+        GameRecord gameRecord1 = new GameRecord("Franco", LocalDateTime.now(), 18, 2, 100);
+
+        System.out.println(gameRecord1.getFormattedRecord());
+
     }
 }
